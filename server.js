@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 });
 
 app.route('/api')
-  .get(async(req, res) => {
+  .get(async(req, res) => { 
     console.log('GET request detected');
     console.log('fetch request data', json);
   })
