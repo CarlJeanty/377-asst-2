@@ -32,7 +32,7 @@ function findMatches(wordToMatch, names) {
       return names.filter(place => {
           const regex = new RegExp(wordToMatch, 'gi');
           return place.name.match(regex) || place.category.match(regex)
-    })
+    });
 }
 
 function numberWithCommas(x) {
