@@ -1,49 +1,48 @@
 
+const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
+const names = [];
+fetch (endpoint)
+    .then(blob => blob.json())
+    .then(data => names.push(...data))
 
-const file = "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
+function findMatches(wordToMatch, names) { 
+      return names.filter(place => {
+          const regex = new RegExp(wordToMatch, 'gi');
+          return place.name.match(regex) || place.category.match(regex)
+    });
+}
 
-const cat = [];
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
 
-//const prom= fetch(file);
-//console.log(prom)
+function displayMatches() {
+    const matchArray = findMatches(this.value, names);
+    const html = matchArray.map(place => { 
+        const regex = new RegExp(this.value, 'gi');
+        const nameName = place.name.replace(regex, `<span class="h1">${this.value}</span>`);
+        const categoryName = place.category.replace(regex, `<span class="h1">${this.value}</span>`);
 
-//fetch(file).then(Bdata =>console.log(Bdata)); raw data no info
-
-//fetch(file)
- //.then(Bdata => Bdata.json())
- //.then(data => console.log(data))
-
-fetch(file)
- .then(Bdata => Bdata.json())
- .then(data => cat.push(...data))
-
- function findMatches(searchmatch,cat){
-  return cat.filter(x => {
-    
-    const regex = new RegExp(searchmatch,'gi');
-    return x.city.name(regex) 
-  } );
-  
-   
- }
-
-
-/*
- function displaymatches(){
-   const matcharr = findmatch(this.value, cities);
-   const html = matcharr.map(x=>{
-    return `
+        return `
+            <li> 
     <li>
-       <span class="rest">${category.city},${category.state},${restau.name}</span>
-       <span class="loc">${$category.address_line_1}</span>
-    </li>
+            <li> 
+                <span class="name">${nameName}, ${categoryName}</span>
+            </li>
     `;
-   })
- }
+    }).join('');
 
- const searchInp = document.querySelector('.Userinput');
+    // console.log(macthArray);
+    suggestions.innerHTML = html;
 
- 
- searchInp.addEventListener('change',displaymatches);
- searchInp.addEventListener('keyup',displaymatches)
- */
+}
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
+
+
+
+
+
