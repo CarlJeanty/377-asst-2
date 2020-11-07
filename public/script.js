@@ -40,7 +40,7 @@ function numberWithCommas(x) {
 }
 
 function displayMatches() {
-    const macthArray = findMatches(this.value, names);
+    const matchArray = findMatches(this.value, names);
     const html = matchArray.map(place => { 
         const regex = new RegExp(this.value, 'gi');
         const nameName = place.name.replace(regex, `<span class="h1">${this.value}</span>`);
