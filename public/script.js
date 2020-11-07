@@ -33,7 +33,7 @@ function displayMatches() {
     suggestions.innerHTML = html;
 
 }
-const searchInput = document.querySelector('.container');
+const searchInput = document.querySelector('.search');
 const suggestions = document.querySelector('.suggestions');
 
 searchInput.addEventListener('change', displayMatches);
