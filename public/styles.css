@@ -14,3 +14,11 @@ background-color: aquamarine;
     width: 300px;
     font-size: 16px;
 }
+
+.name{
+    background-color: lightpink;
+}
+.suggestion{
+    display: flex;
+    flex-wrap: wrap;
+}
