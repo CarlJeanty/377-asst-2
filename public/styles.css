@@ -1,5 +1,8 @@
+@font-face {font-family: 'Open Sans', sans-serif;src: url( "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");}
+
 body{
 background-color: aquamarine;
+font-family: 'Open Sans', sans-serif
 }
 
 .container{
@@ -13,6 +16,7 @@ background-color: aquamarine;
     height: 35px;
     width: 300px;
     font-size: 16px;
+
 }
 
 li {
