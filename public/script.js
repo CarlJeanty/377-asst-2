@@ -21,12 +21,10 @@ function displayMatches() {
         const regex = new RegExp(this.value, 'gi');
         const nameName = place.name.replace(regex, `<span class="h1">${this.value}</span>`);
         const categoryName = place.category.replace(regex, `<span class="h1">${this.value}</span>`);
-        const addressName = place.address.replace(regex, `<span class="h1">${this.value}</span>`);
 
         return `
             <li> 
                 <span class="name">${nameName}, ${categoryName}</span>
-                <span class="name">${addressName}</span>
             </li>
     `;
     }).join('');
