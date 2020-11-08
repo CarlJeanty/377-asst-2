@@ -35,7 +35,7 @@ li {
 }
 
 .name{
-    background-color: lightpink;
+   /* background-color: lightpink;*/
     background-size: 20px;
 }
 .suggestion{
