@@ -23,18 +23,20 @@ ul{
     background-image: linear-gradient(to bottom right, lightpink, yellow);
     margin: 10px;
 }
+
 li {
 
     list-style-type: none;
     margin: 0 0 10px 0;
     text-transform: uppercase;
     display : block;
+    height : 50px;
 
     
 }
 
 .name{
-  
+   /* background-color: lightpink;*/
     background-size: 20px;
 }
 .suggestion{
@@ -54,5 +56,6 @@ ul li {
     transition: .5s;
     flex-direction: column;
     
+    /*background-color: lightpink;*/
     
 }
