@@ -21,6 +21,7 @@ font-family: 'Open Sans', sans-serif
 
 ul{
     background-image: linear-gradient(to bottom right, lightpink, yellow);
+    margin: 10px;
 }
 li {
 
@@ -33,7 +34,7 @@ li {
 }
 
 .name{
-    background-color: lightpink;
+  
     background-size: 20px;
 }
 .suggestion{
@@ -52,6 +53,6 @@ ul li {
     margin:5px 0 ;
     transition: .5s;
     flex-direction: column;
-    background-color: lightpink;
+    
     
 }
