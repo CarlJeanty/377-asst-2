@@ -15,7 +15,14 @@ background-color: aquamarine;
     font-size: 16px;
 }
 
+ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0;
+}
+
 li {
     list-style-type: none;
     text-transform: uppercase;
+
 }
