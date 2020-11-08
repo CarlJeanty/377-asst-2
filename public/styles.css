@@ -26,10 +26,8 @@ li {
 }
 
 .name{
-    /*background-color: lightpink;*/
+    background-color: lightpink;
     background-size: 20px;
-
-    background-image: linear-gradient(to bottom right, lightpink, yellow);
 }
 .suggestion{
     display: flex;
