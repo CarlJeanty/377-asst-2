@@ -33,4 +33,18 @@ li {
     display: flex;
     flex-wrap: wrap;
     text-transform: uppercase;
+    width: 450px;
+    margin: 100px auto 0;
+    padding:10px ; 
+    box-sizing: border-box;
+}
+ul li {
+    display: flex;
+    padding: 10px 20px;
+    color: #fff;
+    margin:5px 0 ;
+    transition: .5s;
+    flex-direction: column;
+    background-color: lightpink;
+    
 }
