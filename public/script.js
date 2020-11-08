@@ -21,10 +21,15 @@ function displayMatches() {
         const regex = new RegExp(this.value, 'gi');
         const nameName = place.name.replace(regex, `<span class="h1">${this.value}</span>`);
         const categoryName = place.category.replace(regex, `<span class="h1">${this.value}</span>`);
-
+        const address = place.address_line_1.replace(regex,`<span class="h1">${this.value}</span>`);
+        const city = place.city.replace(regex, `<span class="h1">${this.value}</span>`);
+        const state = place.state.replace(regex, `<span class="h1">${this.value}</span>`);
+    
         return `
             <li> 
                 <span class="name">${nameName}, ${categoryName}</span>
+                <span class="address">${address}, ${city}</span>
+                <pan class ="state"> ${state}</span>
             </li>
     `;
     }).join('');
