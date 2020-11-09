@@ -58,8 +58,11 @@ ul li {
     transition: .5s;
     flex-direction: column;
     background-image: linear-gradient(to bottom right, lightpink, rgb(185, 116, 241));
-    
+    font-weight: 500;
     /*background-color: lightpink;*/
     
 }
 
+.header{
+    font-weight: 700;
+}
